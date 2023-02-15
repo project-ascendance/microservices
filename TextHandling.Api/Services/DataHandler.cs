@@ -28,7 +28,7 @@ namespace TextHandling.Api.Services
 
         public async Task<TextContent> GetTextContentAsync(int id)
         {
-            return await _context.TextContents.FirstAsync(x => x.Id == id);
+            return await _context.TextContents.SingleAsync(x => x.Id == id);
         }
 
         public async Task RemoveTextContentAsync(int id)

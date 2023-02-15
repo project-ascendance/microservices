@@ -1,3 +1,4 @@
+using Ascendance.Middlewares;
 using Microsoft.EntityFrameworkCore;
 using TextHandling.Api.Data;
 using TextHandling.Api.Services;
@@ -27,6 +28,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<KeyValidationMiddleware>();
 
 app.MapControllers();
 

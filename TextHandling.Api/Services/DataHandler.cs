@@ -1,9 +1,9 @@
 ﻿using Ascendance.Models;
 using Microsoft.EntityFrameworkCore;
-using TextHandling.Api.Data;
-using TextHandling.Api.Services.Contracts;
+using TextHandling.Micro.Data;
+using TextHandling.Micro.Services.Contracts;
 
-namespace TextHandling.Api.Services
+namespace TextHandling.Micro.Services
 {
     internal class DataHandler: IDataHandler
     {

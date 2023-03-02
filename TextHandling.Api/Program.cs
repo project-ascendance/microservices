@@ -1,8 +1,8 @@
 using Ascendance.Middlewares;
 using Microsoft.EntityFrameworkCore;
-using TextHandling.Api.Data;
-using TextHandling.Api.Services;
-using TextHandling.Api.Services.Contracts;
+using TextHandling.Micro.Data;
+using TextHandling.Micro.Services;
+using TextHandling.Micro.Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +14,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TextHandlingDbContext>(options => options.UseSqlite(
     builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//TODO add rabbitMq with config
+
 builder.Services.AddScoped<IDataHandler,DataHandler>();
 
 var app = builder.Build();

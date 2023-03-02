@@ -1,12 +1,9 @@
-﻿using Ascendance.Models;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Http;
+﻿using System.Text.Json;
+using Ascendance.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
-using System.Text.Json;
-using TextHandling.Api.Services.Contracts;
+using TextHandling.Micro.Services.Contracts;
 
-namespace TextHandling.Api.Controllers
+namespace TextHandling.Micro.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

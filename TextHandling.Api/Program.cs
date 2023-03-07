@@ -18,8 +18,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TextHandlingDbContext>(options => options.UseSqlite(
     builder.Configuration.GetConnectionString("DefaultConnection")));
 
-//TODO add rabbitMq with config
-
 builder.Services.AddScoped<IDataHandler,DataHandler>();
 builder.Services.AddScoped < IConnectionFactory>(cF =>
     new ConnectionFactory()

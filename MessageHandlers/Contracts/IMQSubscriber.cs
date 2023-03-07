@@ -8,7 +8,10 @@ namespace MessageHandlers.Contracts
 {
     public interface IMQSubscriber
     {
-        IMQSubscriber AddQueue(string queueName);
-        IMQSubscriber QueueSubscribe(string queueName);
+        IMQSubscriber AddExchange(string exchange);
+        IMQSubscriber AddQueue(string queue);
+        IMQSubscriber QueueSubscribe(string queue, string exchange);
+        Task ConsumeAsync(string queue);
+        void Dispose();
     }
 }

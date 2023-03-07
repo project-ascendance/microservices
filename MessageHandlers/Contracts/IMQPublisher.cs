@@ -8,7 +8,8 @@ namespace MessageHandlers.Contracts
 {
     public interface IMQPublisher
     {
-        IMQPublisher AddQueue(string queueName);
-        Task PublishAsync(string exchange, string queueName, string JsonBody);
+        IMQPublisher AddExchange(string exchange);
+        Task PublishAsync(string exchange, string JsonBody);
+        void Dispose();
     }
 }

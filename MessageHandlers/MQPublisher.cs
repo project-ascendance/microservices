@@ -1,4 +1,5 @@
 ﻿using MessageHandlers.Contracts;
+using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -10,21 +11,36 @@ namespace MessageHandlers
 {
     public class MQPublisher : IMQPublisher
     {
-        //TODO
-        public MQPublisher()
+        private readonly IConnectionFactory _connectionFactory;
+        private readonly IConnection _connection;
+        private readonly IModel _channel;
+        
+        public MQPublisher(IConnectionFactory connectionFactory)
         {
-            
+            _connectionFactory = connectionFactory;
+            _connection = _connectionFactory.CreateConnection();
+            _channel = _connection.CreateModel();
         }
 
-        public IMQPublisher AddQueue(string queueName)
+        public IMQPublisher AddExchange(string exchange)
         {
-            throw new NotImplementedException();
+            _channel.ExchangeDeclare(exchange, type: ExchangeType.Fanout);
+            return this;
         }
 
-        public Task PublishAsync(string exchange, string queueName, string JsonBody)
+        public Task PublishAsync(string exchange, string JsonBody)
         {
-            
-            throw new NotImplementedException();
+            var body = Encoding.UTF8.GetBytes(JsonBody);
+
+            _channel.BasicPublish(exchange, "", null, body);
+
+            return Task.CompletedTask;
+        }
+
+        public void Dispose()
+        {
+            _connection.Dispose();
+            _channel.Dispose();
         }
     }
 }

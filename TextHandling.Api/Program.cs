@@ -1,5 +1,8 @@
 using Ascendance.Middlewares;
+using MessageHandlers;
+using MessageHandlers.Contracts;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
 using TextHandling.Micro.Data;
 using TextHandling.Micro.Services;
 using TextHandling.Micro.Services.Contracts;
@@ -18,6 +21,13 @@ builder.Services.AddDbContext<TextHandlingDbContext>(options => options.UseSqlit
 //TODO add rabbitMq with config
 
 builder.Services.AddScoped<IDataHandler,DataHandler>();
+builder.Services.AddScoped < IConnectionFactory>(cF =>
+    new ConnectionFactory()
+    {
+        VirtualHost= "localhost",
+    });
+    builder.Services.AddScoped<IMQSubscriber, MQSubscriber>();
+builder.Services.AddScoped<IMQPublisher, MQPublisher>();
 
 var app = builder.Build();
 

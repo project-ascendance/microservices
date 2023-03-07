@@ -32,6 +32,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Ascendance.Middlewares\Ascendance.Middlewares.csproj" />
     <ProjectReference Include="..\Ascendance.Models\Ascendance.Models.csproj" />
+    <ProjectReference Include="..\MessageHandlers\MessageHandlers.csproj" />
   </ItemGroup>
 
 </Project>

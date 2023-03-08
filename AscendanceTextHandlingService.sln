@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextHandling.Api", "TextHan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ascendance.Middlewares", "Ascendance.Middlewares\Ascendance.Middlewares.csproj", "{815E1A3E-F98B-4AF6-ABCD-25830D60CEF0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageHandlers", "MessageHandlers\MessageHandlers.csproj", "{102EE43E-275B-4519-8FA6-9992C9E06727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageHandlerAPIs", "MessageHandlers\MessageHandlerAPIs.csproj", "{102EE43E-275B-4519-8FA6-9992C9E06727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

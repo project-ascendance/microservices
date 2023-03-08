@@ -1,4 +1,4 @@
-﻿using MessageHandlers.Contracts;
+﻿using MessageHandlerAPIs.Contracts;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MessageHandlers
+namespace MessageHandlerAPIs
 {
     public class MQPublisher : IMQPublisher
     {
         private readonly IConnectionFactory _connectionFactory;
         private readonly IConnection _connection;
         private readonly IModel _channel;
-        
+
         public MQPublisher(IConnectionFactory connectionFactory)
         {
             _connectionFactory = connectionFactory;

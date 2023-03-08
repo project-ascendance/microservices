@@ -1,5 +1,5 @@
 ﻿using Ascendance.Models;
-using MessageHandlers.Contracts;
+using MessageHandlerAPIs.Contracts;
 using Microsoft.EntityFrameworkCore;
 using TextHandling.Api.Data;
 using TextHandling.Api.Services.Contracts;

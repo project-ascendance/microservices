@@ -1,4 +1,4 @@
-﻿using MessageHandlers.Contracts;
+﻿using MessageHandlerAPIs.Contracts;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MessageHandlers
+namespace MessageHandlerAPIs
 {
     public class MQSubscriber : IMQSubscriber
     {
@@ -29,7 +29,7 @@ namespace MessageHandlers
             _channel.ExchangeDeclare(exchange, type: ExchangeType.Fanout);
             return this;
         }
-        
+
         public IMQSubscriber AddQueue(string queue)
         {
             _channel.QueueDeclare(queue, false, false, false);

@@ -1,6 +1,6 @@
 using Ascendance.Middlewares;
-using MessageHandlers;
-using MessageHandlers.Contracts;
+using MessageHandlerAPIs;
+using MessageHandlerAPIs.Contracts;
 using Microsoft.EntityFrameworkCore;
 using RabbitMQ.Client;
 using TextHandling.Api.Data;

@@ -1,7 +1,7 @@
 ﻿using Ascendance.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace TextHandling.Micro.Data
+namespace TextHandling.Api.Data
 {
     public class TextHandlingDbContext: DbContext
     {

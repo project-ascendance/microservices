@@ -1,6 +1,6 @@
 ﻿using Ascendance.Models;
 
-namespace TextHandling.Micro.Services.Contracts
+namespace TextHandling.Api.Services.Contracts
 {
     public interface IDataHandler
     {

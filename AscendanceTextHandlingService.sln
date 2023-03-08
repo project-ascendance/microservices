@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ascendance.Models", "Ascendance.Models\Ascendance.Models.csproj", "{34A70EEC-ABD0-455C-912C-EE787D9B0F3E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextHandling.Micro", "TextHandling.Api\TextHandling.Micro.csproj", "{AA4E9E85-F240-4F51-AAB3-D234D41CAE77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextHandling.Api", "TextHandling.Api\TextHandling.Api.csproj", "{AA4E9E85-F240-4F51-AAB3-D234D41CAE77}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ascendance.Middlewares", "Ascendance.Middlewares\Ascendance.Middlewares.csproj", "{815E1A3E-F98B-4AF6-ABCD-25830D60CEF0}"
 EndProject

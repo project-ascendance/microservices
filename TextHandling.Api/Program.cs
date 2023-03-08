@@ -3,9 +3,9 @@ using MessageHandlers;
 using MessageHandlers.Contracts;
 using Microsoft.EntityFrameworkCore;
 using RabbitMQ.Client;
-using TextHandling.Micro.Data;
-using TextHandling.Micro.Services;
-using TextHandling.Micro.Services.Contracts;
+using TextHandling.Api.Data;
+using TextHandling.Api.Services;
+using TextHandling.Api.Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,7 +24,6 @@ builder.Services.AddScoped < IConnectionFactory>(cF =>
     {
         VirtualHost= "localhost",
     });
-    builder.Services.AddScoped<IMQSubscriber, MQSubscriber>();
 builder.Services.AddScoped<IMQPublisher, MQPublisher>();
 
 var app = builder.Build();

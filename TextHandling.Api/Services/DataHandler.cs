@@ -1,10 +1,10 @@
 ﻿using Ascendance.Models;
 using MessageHandlers.Contracts;
 using Microsoft.EntityFrameworkCore;
-using TextHandling.Micro.Data;
-using TextHandling.Micro.Services.Contracts;
+using TextHandling.Api.Data;
+using TextHandling.Api.Services.Contracts;
 
-namespace TextHandling.Micro.Services
+namespace TextHandling.Api.Services
 {
     internal class DataHandler: IDataHandler
     {

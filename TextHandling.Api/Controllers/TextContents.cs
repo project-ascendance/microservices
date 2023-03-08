@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
 using Ascendance.Models;
 using Microsoft.AspNetCore.Mvc;
-using TextHandling.Micro.Services.Contracts;
+using TextHandling.Api.Services.Contracts;
 
-namespace TextHandling.Micro.Controllers
+namespace TextHandling.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

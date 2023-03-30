@@ -21,8 +21,10 @@ namespace TextHandling.Api.Services
         {
             _context.Add(content);
             await _context.SaveChangesAsync();
+
             _mQPublisher.AddExchange("testExchange");
             await _mQPublisher.PublishAsync("testExchange", content.ToString());
+            _mQPublisher.Dispose();
         }
 
         public async Task UpdateTextContentAsync(TextContent content)

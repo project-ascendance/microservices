@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  mqworker:
+  
+    build:
+      dockerfile: MQWorkerService\bin\Release\net7.0\publish\linux-x64\Dockerfile
+    networks:
+      - rabbit
+    deploy:
+        resources:
+            limits:
+              cpus: '0.25'
+              memory: 512M
+
+networks:
+  rabbit:
+    name: rabbit

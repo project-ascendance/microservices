@@ -25,6 +25,7 @@ builder.Services.AddScoped < IConnectionFactory>(cF =>
         VirtualHost= "localhost",
     });
 builder.Services.AddScoped<IMQPublisher, MQPublisher>();
+builder.Services.AddScoped<IMQConsumer, MQConsumer>();
 
 var app = builder.Build();
 

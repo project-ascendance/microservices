@@ -22,15 +22,15 @@ namespace TextHandling.Api.Services
             _context.Add(content);
             await _context.SaveChangesAsync();
 
-            _mQPublisher.AddExchange("testExchange");
-            await _mQPublisher.PublishAsync("testExchange", content.ToString());
-            _mQPublisher.Dispose();
+            //TODO implement publisher
         }
 
         public async Task UpdateTextContentAsync(TextContent content)
         {
             _context.Update(content); 
             await _context.SaveChangesAsync();
+
+            //TODO implement publisher
         }
 
         public async Task<TextContent> GetTextContentAsync(int id)
@@ -42,6 +42,8 @@ namespace TextHandling.Api.Services
         {
             _context.Remove(id);
             await _context.SaveChangesAsync();
+
+            //TODO implement publisher
         }
     }
 }

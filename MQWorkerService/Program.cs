@@ -12,7 +12,7 @@ IHost host = Host.CreateDefaultBuilder(args)
             {
                 VirtualHost = "microhost",
                 UserName = "ascendanceadmin",
-                Password = "apollo1150",
+                Password = "pass",
                 HostName = "rabbitmq_cpu_ltd",
                 //HostName = "83.229.84.17"
 
